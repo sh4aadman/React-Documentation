@@ -1,34 +1,29 @@
 const today = new Date();
 
 function formatDate(date) {
-  return new Intl.DateTimeFormat(
-    'en-US',
-    { weekday: 'long' }
-  ).format(date);
+  return new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(date);
 }
 
-export default function TodoList() {
-  return (
-    <h1>To Do List for {formatDate(today)}</h1>
-  );
+export function TodoList() {
+  return <h1>To Do List for {formatDate(today)}</h1>;
 }
 
 // Curly Braces help to write JavaScript code inside JSX.
 
 // Curly Braces are used inside JSX tag content or right after "=" in attributes.
 
-const baseUrl = 'https://i.imgur.com/';
+const baseUrl = "https://i.imgur.com/";
 const person = {
-  name: 'Gregorio Y. Zara',
-  imageId: '7vQD0fP',
-  imageSize: 's',
+  name: "Gregorio Y. Zara",
+  imageId: "7vQD0fP",
+  imageSize: "s",
   theme: {
-    backgroundColor: 'black',
-    color: 'pink'
-  }
+    backgroundColor: "black",
+    color: "pink",
+  },
 };
 
-export default function TodoList() {
+export function TodoList() {
   return (
     <div style={person.theme}>
       <h1>{person.name}'s Todos</h1>
